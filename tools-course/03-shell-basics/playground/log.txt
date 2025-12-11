@@ -1,0 +1,4 @@
+something Failed error is there
+OK : Everything Fine 
+ERROR: System Gets Crashed
+WARN: Low Memory 
