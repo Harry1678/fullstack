@@ -1,0 +1,4 @@
+service:
+  name: data-service
+  refresh_interval: 30
+  enabled: true

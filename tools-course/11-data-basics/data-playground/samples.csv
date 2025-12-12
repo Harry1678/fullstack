@@ -1,0 +1,4 @@
+id,value,condition
+S01,12.5,treated
+S02,15.1,control
+S03,11.9,treated

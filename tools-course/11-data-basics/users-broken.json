@@ -1,0 +1,7 @@
+[
+  {
+    "id": "usr_001"
+    "name": "Alex"   // missing comma, wrong comment style
+    "email": 'alex@example.com'
+  }
+]

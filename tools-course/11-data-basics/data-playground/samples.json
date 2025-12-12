@@ -1,0 +1,5 @@
+[
+  { "id": "S01", "value": 12.5, "condition": "treated" },
+  { "id": "S02", "value": 15.1, "condition": "control" },
+  { "id": "S03", "value": 11.9, "condition": "treated" }
+]
