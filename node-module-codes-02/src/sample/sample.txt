@@ -1,0 +1,9 @@
+A lot of backend work in Node.js involves working with files, data flowing through streams, and reacting to events.
+This section helps you get comfortable with:
+
+Reading and writing files (text, JSON, binary).
+Understanding buffers and encodings.
+Building pipelines with streams, handling backpressure.
+Emitting and listening to custom events.
+Using watchers to respond to filesystem changes.
+Mastering these basics is crucial. Without them, you’ll either misuse libraries or get stuck when performance matters.
