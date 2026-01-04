@@ -1,0 +1,37 @@
+{
+  "name": "node-07-testing-module",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "test": "vitest run --pool=forks",
+    "test:watch": "vitest --pool=forks",
+    "test:coverage": "vitest run --coverage --pool=forks",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@testcontainers/postgresql": "^11.11.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/pg": "^8.16.0",
+    "@types/supertest": "^2.0.16",
+    "@typescript-eslint/eslint-plugin": "^7.9.0",
+    "@typescript-eslint/parser": "^7.9.0",
+    "@vitest/coverage-v8": "^1.6.0"
+,
+    "eslint": "^8.57.0",
+    "msw": "^2.3.1",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4",
+    "testcontainers": "^10.9.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
