@@ -1,5 +1,5 @@
-import { sendEmail } from "../services/email.service";
-import { isProcessed, markProcessed } from "./idempotency";
+import { sendEmail } from "../services/email.service.js";
+import { isProcessed, markProcessed } from "./idempotency.js";
 
 export async function processEmailJob(job: any) {
   const { to, subject, idempotencyKey } = job.data;

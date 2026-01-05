@@ -1,6 +1,6 @@
 import { Worker } from "bullmq";
-import { connection } from "./redis";
-import { fetchWeather } from "../services/weather.service";
+import { connection } from "./redis.js";
+import { fetchWeather } from "../services/weather.service.js";
 
 let lastRun: string | null = null;
 

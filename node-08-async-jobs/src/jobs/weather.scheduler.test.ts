@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from "vitest";
-import { fetchWeather } from "../../src/services/weather.service";
+import { fetchWeather } from "../../src/services/weather.service.js";
 
 vi.useFakeTimers();
 

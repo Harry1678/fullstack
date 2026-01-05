@@ -1,6 +1,6 @@
 import { Worker } from "bullmq";
-import { connection } from "./redis";
-import { processEmailJob } from "./email.processor";
+import { connection } from "./redis.js";
+import { processEmailJob } from "./email.processor.js";
 
 export const emailWorker = new Worker(
   "email-queue",

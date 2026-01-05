@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { emailQueue } from "../jobs/email.queue";
+import { emailQueue } from "../jobs/email.queue.js";
 import crypto from "crypto";
 
 const router = Router();

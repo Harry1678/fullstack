@@ -1,4 +1,4 @@
-import { connection } from "./redis";
+import { connection } from "./redis.js";
 
 const PREFIX = "idem:";
 
