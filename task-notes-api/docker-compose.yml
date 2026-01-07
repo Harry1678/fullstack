@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: task-notes-api
+    command: pnpm run dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+
+  worker:
+    build: .
+    container_name: task-notes-worker
+    command: pnpm run worker
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    volumes:
+      - ./data:/app/data
+
+  redis:
+    image: redis:7
+    container_name: task-notes-redis
+    ports:
+      - "6379:6379"

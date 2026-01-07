@@ -6,7 +6,7 @@ import { problem } from "../utils/errors";
 export function createRoutes(db: Client) {
   const router = Router();
 
-  // POST /users
+ 
   router.post("/users", async (req: Request, res: Response) => {
     try {
       const user = await createUser(db, req.body.email);
@@ -19,7 +19,7 @@ export function createRoutes(db: Client) {
     }
   });
 
-  // GET /users/:id
+ 
   router.get("/users/:id", async (req: Request, res: Response) => {
     try {
       const user = await getUserById(db, Number(req.params.id));
@@ -38,7 +38,7 @@ export function createRoutes(db: Client) {
     }
   });
 
-  // GET /users (pagination + DB down handling)
+  
   router.get("/users", async (req: Request, res: Response) => {
     try {
       const limit = Number(req.query.limit ?? 10);

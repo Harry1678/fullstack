@@ -25,7 +25,7 @@ afterAll(async () => {
 
 describe("Drill 5 – DB failure", () => {
   it("returns 503 when DB is down", async () => {
-    await db.end(); // simulate DB crash
+    await db.end(); 
 
     const res = await request(app).get("/users");
 
