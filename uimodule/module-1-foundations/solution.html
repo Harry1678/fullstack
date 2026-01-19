@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI Foundations - Module 1</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="layout">
+
+    <header>
+      <h1>UI Foundations</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article>
+        <h2>Why Semantic HTML Matters</h2>
+
+        <p>
+          Semantic HTML improves accessibility, readability, SEO, and long-term
+          maintainability of web applications.
+        </p>
+
+        <img
+          src="https://picsum.photos/800/400"
+          alt="Abstract landscape photograph used as article cover"
+        />
+
+        <h3>Top Movies</h3>
+        <ol>
+          <li>Inception</li>
+          <li>Interstellar</li>
+          <li>The Dark Knight</li>
+        </ol>
+
+        <h3>Books to Read</h3>
+        <ul>
+          <li>Clean Code</li>
+          <li>You Don't Know JS</li>
+          <li>Designing Data-Intensive Applications</li>
+        </ul>
+
+        <h3>Article Stats</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Metric</th>
+              <th scope="col">Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Read Time</th>
+              <td>5 min</td>
+            </tr>
+            <tr>
+              <th scope="row">Views</th>
+              <td>12,300</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+
+    <aside>
+      <h2>Related</h2>
+      <p>More articles on frontend best practices.</p>
+    </aside>
+
+    <footer>
+      <small>© 2026 UI Module</small>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Notes — Login</title>
+
+  <link rel="stylesheet" href="styles/theme.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/components.css">
+</head>
+
+<body>
+
+  <header class="auth-header">
+    <h1>Task Notes</h1>
+
+    <button
+      class="theme-toggle"
+      aria-label="Toggle theme"
+      onclick="document.documentElement.classList.toggle('dark')"
+    >
+      🌙
+    </button>
+  </header>
+
+  <main class="auth-page">
+
+    <section class="auth-card">
+      <h2>Login</h2>
+
+      <form class="auth-form" novalidate>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            placeholder="••••••••"
+          />
+        </div>
+
+        <button type="submit" class="btn-primary">
+          Sign in
+        </button>
+
+        <p class="form-error" hidden>
+          Invalid email or password
+        </p>
+
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

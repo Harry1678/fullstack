@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI Typography Module</title>
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Merriweather:wght@300;400;700&family=Source+Code+Pro:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <header>
+      <h1>Typography Foundations</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Fonts</a></li>
+        <li><a href="#">Hierarchy</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <section class="hero">
+        <h1>Good Typography Builds Trust</h1>
+      </section>
+
+      <article>
+        <p>
+          Typography is the visual voice of your content. Good typography improves
+          readability, hierarchy, and user experience across devices.
+        </p>
+
+        <h2>Font Weight Demo</h2>
+        <p class="weight-400">Weight 400 - Regular</p>
+        <p class="weight-600">Weight 600 - Semi Bold</p>
+        <p class="weight-800">Weight 800 - Extra Bold</p>
+
+        <h2>Variable Font Demo</h2>
+        <label>
+          Adjust weight:
+          <input
+            type="range"
+            min="100"
+            max="900"
+            step="50"
+            value="400"
+            oninput="document.documentElement.style.setProperty('--demo-weight', this.value)"
+          />
+        </label>
+
+        <p class="variable-demo">
+          This paragraph uses a variable font and changes weight dynamically.
+        </p>
+
+        <h2>Code Example</h2>
+        <pre><code>const message = "Typography matters";
+console.log(message);</code></pre>
+
+        <blockquote>
+          Typography is the craft of endowing human language with a durable visual form.
+        </blockquote>
+
+      </article>
+
+    </main>
+
+    <aside>
+      <h3>Notes</h3>
+      <p>Same solution.html is used across drills.</p>
+    </aside>
+
+    <footer>
+      <small>© 2026 UI Module</small>
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f9;
+  --text: #111111;
+  --border: #dcdfe4;
+  --accent: #3056d3;
+  --error: #c62828;
+
+  --radius: 8px;
+}
+
+.dark {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #f1f1f1;
+  --border: #2a2f3a;
+  --accent: #7aa2ff;
+}

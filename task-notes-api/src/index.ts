@@ -1,28 +1,22 @@
 import 'dotenv/config';
-import path from 'node:path';
 import { loadConfig } from './config';
 import { createLogger } from './logger';
-import { FileStorage } from './storage';
 import { TaskEventEmitter } from './events';
 import { TaskServer } from './server';
+import { postgresPool } from './database/postgres';
+
 
 const config = loadConfig();
 const logger = createLogger(config.logLevel as any);
 
-
-const dataFile = path.join(process.cwd(), 'data', 'tasks.json');
-const storage = new FileStorage(dataFile);
-
-
-const server = new TaskServer(config, storage);
-
+const server = new TaskServer(config);
 const events = new TaskEventEmitter();
 
 let running = true;
 
 async function bootstrap() {
-  const notes = await storage.loadNotes();
-  logger.info('Loaded notes', { count: notes.length });
+ 
+  logger.info('Starting application');
 
   events.on('task:created', (task) => {
     logger.info('Task created', task);
@@ -36,21 +30,20 @@ async function bootstrap() {
     logger.info('Task deleted', { id });
   });
 
-  await storage.watchChanges(() => {
-    logger.info('Data file changed on disk');
-  });
-
   await server.start();
 }
-
 async function shutdown(signal: string) {
   if (!running) return;
   running = false;
 
   logger.info(`Shutting down (${signal})`);
-  await server.stop();
+
+  await server.stop();        
+  await postgresPool.end();   
+
   process.exit(0);
 }
+
 
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);

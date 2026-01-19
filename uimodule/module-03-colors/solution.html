@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI Module 03 - Colors</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+
+  <header class="hero">
+    <h1>Color Systems with HSL & OKLCH</h1>
+  </header>
+
+  <main class="layout">
+
+    <section class="card">
+      <h2>Card Example</h2>
+      <p>
+        This card demonstrates background, surface, text, and accent tokens
+        working together across themes.
+      </p>
+      <a href="#">Accent Link</a>
+    </section>
+
+    <section class="card">
+      <h2>Code Block</h2>
+      <pre><code>const theme = "dark";
+document.documentElement.dataset.theme = theme;</code></pre>
+    </section>
+
+    <section class="card">
+      <h2>Color Swatches</h2>
+
+      <div class="swatches">
+        <div class="swatch" style="background:hsl(260 70% 50%)">
+          HSL(260, 70%, 50%)
+        </div>
+        <div class="swatch" style="background:hsl(260 70% 40%)">
+          HSL(260, 70%, 40%)
+        </div>
+        <div class="swatch" style="background:hsl(260 40% 50%)">
+          HSL(260, 40%, 50%)
+        </div>
+        <div class="swatch" style="background:oklch(0.62 0.15 260)">
+          OKLCH(0.62, 0.15, 260)
+        </div>
+        <div class="swatch" style="background:oklch(0.72 0.12 260)">
+          OKLCH(0.72, 0.12, 260)
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    if (saved) root.dataset.theme = saved;
+
+    document.getElementById("themeToggle").onclick = () => {
+      const next = root.dataset.theme === "dark" ? "" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    };
+  </script>
+</body>
+</html>

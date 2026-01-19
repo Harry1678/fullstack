@@ -1,0 +1,99 @@
+:root {
+  --h-bg: 210;
+  --h-accent: 260;
+
+  --bg: hsl(var(--h-bg) 20% 98%);
+  --surface: hsl(var(--h-bg) 20% 94%);
+  --text: hsl(var(--h-bg) 15% 15%);
+
+  --accent: oklch(0.62 0.15 260);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+}
+
+:root[data-theme="dark"] {
+  --bg: hsl(var(--h-bg) 20% 8%);
+  --surface: hsl(var(--h-bg) 20% 14%);
+  --text: hsl(var(--h-bg) 15% 90%);
+
+  --accent: oklch(0.72 0.12 260);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero {
+  padding: var(--space-3);
+  background: linear-gradient(
+    135deg,
+    hsl(var(--h-accent) 70% 55%),
+    hsl(calc(var(--h-accent) + 20) 70% 40%)
+  );
+  color: #fff;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--surface);
+  padding: var(--space-2);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px hsl(var(--h-bg) 20% 10% / 0.15);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+pre {
+  background: var(--bg);
+  padding: var(--space-2);
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.swatch {
+  padding: var(--space-2);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #fff;
+}

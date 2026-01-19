@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task Notes — Dashboard</title>
+
+    <link rel="stylesheet" href="styles/theme.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  
+
+    
+
+  </head>
+
+  <body>
+    <header class="app-header">
+      <h1>Task Notes</h1>
+
+      <button class="btn-secondary">Logout</button>
+    </header>
+
+    <main class="app-layout">
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <button class="filter active">All Tasks</button>
+          <button class="filter">Completed</button>
+          <button class="filter">Pending</button>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <h2>Your Tasks</h2>
+        <p class="loading-state" hidden>Loading tasks…</p>
+        <p class="error-state" hidden>Something went wrong. Try again.</p>
+
+        <div class="task-list">
+          <div class="task-card priority">
+            <p class="task-title">Finish UI module</p>
+
+            <div class="task-actions">
+              <button class="btn-icon complete-btn" aria-label="Mark complete">
+                ✓
+              </button>
+
+              <button class="btn-icon edit-btn" aria-label="Edit task">
+                ✎
+              </button>
+
+              <button
+                class="btn-icon danger delete-btn"
+                aria-label="Delete task"
+              >
+                🗑
+              </button>
+            </div>
+          </div>
+
+          <div class="task-card completed">
+            <p class="task-title">Connect Task Notes API</p>
+
+            <div class="task-actions">
+              <button class="btn-icon">✓</button>
+              <button class="btn-icon">✎</button>
+              <button class="btn-icon danger">🗑</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+     
+       <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>

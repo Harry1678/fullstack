@@ -1,0 +1,178 @@
+.auth-card {
+  background: var(--surface);
+  padding: 2rem;
+  width: 100%;
+  max-width: 360px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.auth-card h2 {
+  margin-bottom: 1.5rem;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 0.6rem 0.7rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.form-error {
+  color: var(--error);
+  font-size: 0.85rem;
+}
+.sidebar {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.filter {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.filter.active {
+  background: var(--accent);
+  color: white;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.task-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.task-card {
+  background: var(--surface);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.task-card.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+
+.task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.task-title {
+  margin: 0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-icon:hover {
+  opacity: 0.7;
+}
+
+.btn-icon.danger {
+  color: var(--error);
+}
+
+
+.task-card.completed {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+}
+
+.task-card.priority {
+  border-left: 4px solid var(--accent);
+}
+.loading-state {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.error-state {
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.btn-icon:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+
+.task-card {
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-1px);
+}

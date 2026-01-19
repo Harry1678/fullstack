@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI Module 04 - Icons & Images</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/modern-normalize/modern-normalize.css">
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="#">
+      <span class="material-symbols-outlined" aria-hidden="true">home</span>
+      <span>Home</span>
+    </a>
+    <a href="#">
+      <span class="material-symbols-outlined" aria-hidden="true">search</span>
+      <span>Search</span>
+    </a>
+    <a href="#">
+      <span class="material-symbols-outlined" aria-hidden="true">settings</span>
+      <span>Settings</span>
+    </a>
+  </nav>
+
+  <header class="hero">
+    <h1>Icons & Images in UI</h1>
+  </header>
+
+  <main class="layout">
+
+    <section class="card">
+      <h2>Icon Grid</h2>
+      <div class="icon-grid">
+        <span class="material-symbols-outlined">home</span>
+        <span class="material-symbols-outlined">favorite</span>
+        <span class="material-symbols-outlined">star</span>
+
+        <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        </svg>
+
+        <span class="material-symbols-outlined">download</span>
+        <span class="material-symbols-outlined">upload</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Images</h2>
+
+      <img
+        src="https://picsum.photos/1200/800"
+        alt="Sample landscape photograph"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg"
+        alt="Transparent PNG sample"
+        loading="lazy"
+      />
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png"
+        alt="SVG logo example"
+      />
+    </section>
+
+    <section class="card">
+      <h2>Responsive Image</h2>
+
+      <picture>
+        <source
+          type="image/webp"
+          srcset="
+            https://picsum.photos/600.webp 600w,
+            https://picsum.photos/1200.webp 1200w
+          "
+          sizes="(max-width: 600px) 90vw, 1100px"
+        />
+        <img
+          src="https://picsum.photos/1200/800"
+          alt="Responsive image example"
+          loading="lazy"
+        />
+      </picture>
+    </section>
+
+    <section class="card">
+      <h2>Action Buttons</h2>
+
+      <button class="icon-button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 20h14v-2H5v2zM12 2l5 5h-3v6h-4V7H7l5-5z"/>
+        </svg>
+        Download
+      </button>
+
+      <button class="icon-button">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M19 15v4H5v-4H3v4c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-4h-2zM11 2h2v8h3l-4 4-4-4h3z"/>
+        </svg>
+        Upload
+      </button>
+    </section>
+
+  </main>
+
+</body>
+</html>
